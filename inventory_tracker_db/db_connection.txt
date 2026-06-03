@@ -1,0 +1,29 @@
+# inventory_tracker_db — connection instructions (preview)
+#
+# This file is the single source of truth for how to connect to this PostgreSQL
+# container in the preview environment.
+
+# 1) Connection string
+# Preview port note: this DB is exposed on port 5001 in preview.
+postgresql://postgres:postgres@127.0.0.1:5001/postgres
+
+# 2) Connect with psql (recommended)
+# If psql is installed locally:
+psql "postgresql://postgres:postgres@127.0.0.1:5001/postgres"
+
+# 3) Common commands
+# Show tables:
+# \dt
+#
+# Describe products:
+# \d+ products
+
+# 4) Notes for app containers
+# - Host: 127.0.0.1
+# - Port: 5001
+# - Database: postgres
+# - User: postgres
+# - Password: postgres
+#
+# If your backend uses a DATABASE_URL-like env var, set it to the connection
+# string in section (1) above (do not hard-code it into source).
